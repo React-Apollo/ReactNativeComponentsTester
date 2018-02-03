@@ -8,9 +8,7 @@ import style from './app.style'
 export default function App() {
   return (
     <View style={style.container}>
-      <AwesomeButton onPress={() => {}}>
-        Click me tender
-      </AwesomeButton>
+      <AwesomeButton onPress={() => {}}>Click me tender</AwesomeButton>
     </View>
   )
 }

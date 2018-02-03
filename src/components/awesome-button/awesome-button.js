@@ -17,9 +17,7 @@ export default function AwesomeButton(props: Props) {
       onPress={props.onPress}
       style={StyleSheet.flatten([style.container, props.style])}
     >
-      <Text style={StyleSheet.flatten([style.text, props.textStyle])}>
-        {props.children}
-      </Text>
+      <Text style={StyleSheet.flatten([style.text, props.textStyle])}>{props.children}</Text>
     </TouchableHighlight>
   )
 }

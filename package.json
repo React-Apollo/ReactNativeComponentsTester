@@ -4,19 +4,19 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "precommit": "lint-staged",
-    "prettier": "prettier --semi false --print-width 120 --single-quote --trailing-comma all --write app/**/*.js",
-    "test": "eslint src && flow && jest",
+    "precommit": "lint-staged && yarn test",
+    "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"src/**/*.js\"",
+    "test": "yarn lint && yarn flow && jest",
+    "test:unit": "jest",
     "lint": "eslint src",
     "flow": "flow",
     "flow-stop": "flow stop"
   },
   "lint-staged": {
     "*.js": [
-      "prettier --semi false --print-width 120 --single-quote --trailing-comma all --write",
+      "yarn pretty",
       "git add"
-    ],
-    "test": "eslint src && flow && jest"
+    ]
   },
   "dependencies": {
     "react": "16.2.0",
